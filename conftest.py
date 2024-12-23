@@ -2,6 +2,7 @@ import pytest
 from praktikum.bun import Bun
 from praktikum.ingredient import Ingredient
 from praktikum.database import Database
+from praktikum.ingredient_types import *
 
 @pytest.fixture()
 def create_new_bun():
@@ -10,7 +11,7 @@ def create_new_bun():
 
 @pytest.fixture()
 def create_new_ingredient():
-    new_ingredient = Ingredient('SAUCE', "hot sauce", 100)
+    new_ingredient = Ingredient(INGREDIENT_TYPE_SAUCE, "hot sauce", 100)
     return new_ingredient
 
 @pytest.fixture()
